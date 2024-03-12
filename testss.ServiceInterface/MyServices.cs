@@ -6,7 +6,7 @@ namespace testss.ServiceInterface;
 
 public class MyServices : Service
 {
-    public object Any(MyListRequest request)
+    public object Post(MyListRequest request)
     {
         var l = new List<string>();
 

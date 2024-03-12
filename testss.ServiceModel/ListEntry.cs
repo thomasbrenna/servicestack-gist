@@ -26,5 +26,7 @@ public class ListEntryValidator : AbstractValidator<ListEntry>
         RuleFor(h => h.Prop2).Must(t => t >= 10).WithMessage("Prop2 must be at least 10!");
 
         RuleFor(h => h.Child).NotEmpty().WithMessage("Child cannot be empty!");
+
+        RuleFor(h => h.Child).SetValidator(new ListEntryChildValidator());
     }
 }
